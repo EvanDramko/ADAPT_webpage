@@ -4,4 +4,4 @@
 
 ## Usage
 
-This is the github page that hosts the web-page: https://EvanDramko.github.io/ADAPTpage/
+This is the github page that hosts the web-page: https://evandramko.github.io/ADAPT_webpage/
