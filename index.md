@@ -13,6 +13,6 @@ To accelerate this, researchers increasingly turn to machine learning force fiel
 
 ### Publications
 
-> Binhang Yuan, Cameron R. Wolfe, Chen Dun, Yuxin Tang, Anastasios Kyrillidis, Christopher M. Jermaine, [**``Distributed Learning of Deep Neural Networks using Independent Subnet Training''**]([https://arxiv.org/pdf/1910.02120](https://www.vldb.org/pvldb/vol15/p1581-wolfe.pdf)), Proceedings of the VLDB Endowment, Volume 15, Issue 8, April 2022, pp 1581–1590, https://doi.org/10.14778/3529337.3529343.
->
+
+> Dramko, Evan, et al. "ADAPT: Lightweight, Long-Range Machine Learning Force Fields Without Graphs." arXiv preprint arXiv:2509.24115 (2025). [Paper](https://arxiv.org/abs/2509.24115); [Zenodo](https://zenodo.org/records/17317543); [Github](https://github.com/EvanDramko/ADAPT_Released)
 
