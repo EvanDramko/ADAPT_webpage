@@ -28,3 +28,34 @@ header h1, header h2 {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(60, 50, 30, 0.15);
 }
+
+/* Kill the white panel behind the header/content */
+.wrapper {
+  background: transparent !important;  /* jekyll-theme-minimal often sets white */
+  box-shadow: none;                    /* optional */
+}
+
+/* Ensure the header itself doesn’t force a white slab */
+header {
+  background: transparent !important;
+}
+
+/* Image should not introduce a white box */
+header img {
+  display: block;
+  margin: 0.5rem auto;
+  background: transparent;
+}
+
+/* If you see overlap, force normal document flow */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Your parchment + text colors (adjust if you already set these) */
+body {
+  background-color: #f3e8d3; /* parchment */
+  color: #1a1a1a;
+}
