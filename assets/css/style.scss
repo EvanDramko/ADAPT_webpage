@@ -2,8 +2,29 @@
 ---
 
 @import "jekyll-theme-minimal";
-
 body {
-    background-color: #fdf6e3;
-    color: #111111;
+  background-color: #f3e8d3;  /* parchment paper tone */
+  color: #1a1a1a;             /* deep charcoal text */
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+a {
+  color: #4a3f2a;             /* muted brown for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7b6b44;             /* slightly lighter brown on hover */
+  text-decoration: underline;
+}
+
+header h1, header h2 {
+  color: #2d261a;             /* darker brown title */
+}
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.6); /* subtle paper translucency */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(60, 50, 30, 0.15);
 }
