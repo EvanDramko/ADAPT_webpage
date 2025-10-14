@@ -1,6 +1,10 @@
 title: ADAPT MLIP Framework Page
-logo: /assets/img/adapt_logo_image.png
-description: 
+logo: /ADAPT_webpage/assets/img/adapt_logo_image.png
+description: >
+  Lightweight, long-range machine learning force fields without graphs.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+url: "https://evandramko.github.io"
+baseurl: "/ADAPT_webpage"
+
