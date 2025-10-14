@@ -1,18 +1,20 @@
 ---
 layout: default
-title: ADAPT
 ---
-# ADAPT
-The design of advanced materials begins with determining stable atomic configurations. Given a candidate material or structural sketch, engineers must predict the exact arrangement of atoms that will actually form. This process is described by the Potential Energy Surface (PES), a function parametrized by the atoms, their positions, and environmental conditions. In practice, we typically fix the atoms and environment, leaving the PES as a function of atomic locations alone. Stable structures correspond to local minima of the PES—low energy configurations that can persist in reality. These metastable states are central to modern materials science and nanotechnology, as they ultimately determine the physical properties of the material.
-To find metastable structures in atomistic modeling, one typically performs a relaxation procedure: starting from an initial guess, the structure is iteratively optimized along the PES until it settles at a minimum (just as we do with nearly all optimization tasks). The standard tool for this is Density Functional Theory (DFT), which approximates electron interactions to estimate the energy and forces of a given configuration. By following the forces (think gradients of the PES), DFT can guide the system downhill to a minimum.
+# MLIP/MLFF Overview
+The design of advanced materials begins with determining stable atomic configurations. Given a candidate material or structural sketch, engineers must predict the exact arrangement of atoms that will actually form. This process is characterized by the Potential Energy Surface (PES) — a function mapping atomic positions (and, in principle, environmental conditions) to total system energy. In practice, we typically fix the atoms and environment, leaving the PES as a function of atomic locations alone. Stable structures correspond to local minima on this surface: low-energy configurations that can persist physically. These metastable states ultimately determine the properties of the material.
+To locate such structures, atomistic modeling typically uses relaxation: starting from an initial geometry, the system iteratively descends along the PES until it reaches a minimum. The standard computational tool for this is Density Functional Theory (DFT), which approximates electron interactions to compute the energy and forces of a given configuration. By following the forces (essentially gradients of the PES), DFT drives the system towards an steady-state.
 
-While accurate, DFT is computationally expensive. A single relaxation trajectory may take ~8 hours on a high-performance cluster, creating a major bottleneck in the design of new materials.
-To accelerate this, researchers increasingly turn to machine learning force fields (MLFFs). These models are trained on DFT data and can approximate energy and force calculations over a trajectory in seconds rather than hours. In some workflows, MLFFs are used for a coarse pre-relaxation, with DFT performing the final refinement.
-
-
-
-### Publications
+While accurate, DFT is computationally expensive. A single relaxation trajectory may take ~8 hours on a high-performance cluster, creating a major bottleneck in materials design.
+To accelerate this, researchers are increasingly turning to machine learning force fields (MLFFs), also called machine learning interatomic potentials (MLIPs). Trained on DFT-calculated energies and forces, these models can evaluate new configurations in seconds rather than hours. In many workflows, MLFFs are used for rapid pre-relaxation, with DFT performing the final refinement.
+Our work explores how advancments in machine learning can be leveraged for this task. As an area of ongoing research, we maintain a list of our contributions relevant to this task. 
 
 
+# Contributions:
+
+### ADAPT: Graphless Force Fields
 > Dramko, Evan, et al. "ADAPT: Lightweight, Long-Range Machine Learning Force Fields Without Graphs." arXiv preprint arXiv:2509.24115 (2025). [Paper](https://arxiv.org/abs/2509.24115); [Zenodo](https://zenodo.org/records/17317543); [Github](https://github.com/EvanDramko/ADAPT_Released)
 
+The majority of existing MLFF works utilize graph based neural network (GNN) strategies. GNNs offer rotation and translation equivariance and are a natural fit to the way we often diagram atomic structures. Motivated by the case of crystal defects, we show that the use of direct Cartesian Coordinate systems rather than graphs allows for efficient computation of all possible pairwise interactions through self-attention. The effect of exact distance measures and global interactions is a 33% reduction in prediction error on a defect dataset. 
+
+We also show that conventional metrics such as MSE or MAE on atomic positions are insufficient for defect systems. Minor perturbations in the bulk lattice dominate these errors, washing out errors near the defect center — the region most relevant to physical behavior. Since DFT refinement can easily correct small lattice deviations, evaluation metrics should emphasize local correctness at defect centers, not uniform accuracy across the crystal.
