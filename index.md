@@ -15,11 +15,11 @@ Our work explores how advancments in machine learning can be leveraged for this 
 ### ADAPT: Graphless Force Fields
 > Dramko, Evan, et al. "ADAPT: Lightweight, Long-Range Machine Learning Force Fields Without Graphs." arXiv preprint arXiv:2509.24115 (2025). [Paper](https://arxiv.org/abs/2509.24115); [Zenodo](https://zenodo.org/records/17347558); [Github](https://github.com/EvanDramko/ADAPT_Released)
 
-The majority of existing MLFF works utilize graph based neural network (GNN) strategies. GNNs offer rotation and translation equivariance and are a natural fit to the way we often diagram atomic structures. Motivated by the case of crystal defects, we show that the use of direct Cartesian Coordinate systems rather than graphs allows for efficient computation of all possible pairwise interactions through self-attention. The effect of exact distance measures and global interactions is a 33% reduction in prediction error on a defect dataset. Below, we show a side by side comparison of the actual vs predicted forces for ADAPT (left) and MACE (right). 
+The majority of existing MLFF works utilize graph based neural network (GNN) strategies. GNNs offer rotation and translation equivariance and are a natural fit to the way we often diagram atomic structures. Motivated by the case of crystal defects, we show that the use of direct Cartesian Coordinate systems rather than graphs allows for efficient computation of all possible pairwise interactions through self-attention. The effect of exact distance measures and global interactions is a 33% reduction in prediction error on a defect dataset. Below, we show a side-by-side comparison of the actual vs predicted forces for ADAPT (left) and MACE (right). 
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="/assets/img/ours.png" style="width: 45%;">
-  <img src="/assets/img/theirs.png" style="width: 45%;">
+  <img src="ours.png" style="width: 45%;">
+  <img src="theirs.png" style="width: 45%;">
 </div>
 
 We also show that conventional metrics such as MSE or MAE on atomic positions are insufficient for defect systems. Minor perturbations in the bulk lattice dominate these errors, washing out errors near the defect center — the region most relevant to physical behavior. Since DFT refinement can easily correct small lattice deviations, evaluation metrics should emphasize local correctness at defect centers, not uniform accuracy across the crystal.
