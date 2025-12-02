@@ -23,3 +23,12 @@ The majority of existing MLFF works utilize graph based neural network (GNN) str
 </div>
 
 We also show that conventional metrics such as MSE or MAE on atomic positions are insufficient for defect systems. Minor perturbations in the bulk lattice dominate these errors, washing out errors near the defect center — the region most relevant to physical behavior. Since DFT refinement can easily correct small lattice deviations, evaluation metrics should emphasize local correctness at defect centers, not uniform accuracy across the crystal.
+
+
+### Fine-Tuning of MLIPs Through the Lens of Iterated Maps
+> Dramko, Evan, et al. "On The Finetuning of MLIPs Through the Lens of Iterated Maps With BPTT"
+[Paper:](https://arxiv.org/abs/2512.01067)<br>
+
+We propose a fine-tuning method to be used on a pretrained MLIP in which we create a fully-differentiable end-to-end simulation loop that optimizes the predicted final structures directly. Trajectories are unrolled and gradients are tracked through the entire relaxation. We show that the we acheive a roughly 50% reduction in error after a few epochs of fine-tuning. Importantly, this does not increase the data requirements to create a model, handling a key limitation for many practioners in creation of MLIP models. 
+
+Iterative maps view: We define a function *frame* by predicting forces and making a structural update step. We connect the process of structural relaxation to an iterative application of *frame*, and treat the atomic relaxation as training through this iterated map. 
