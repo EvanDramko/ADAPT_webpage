@@ -30,4 +30,8 @@ We also show that conventional metrics such as MSE or MAE on atomic positions ar
 
 We propose a fine-tuning method to be used on a pretrained MLIP in which we create a fully-differentiable end-to-end simulation loop that optimizes the predicted final structures directly. Trajectories are unrolled and gradients are tracked through the entire relaxation. We show that the we acheive a roughly 50% reduction in error after a few epochs of fine-tuning. Importantly, this does not increase the data requirements to create a model, handling a key limitation for many practioners in creation of MLIP models. 
 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="bptt_scope.png" style="width: 90%;">
+</div>
+
 Iterative maps view: We define a function *frame* by predicting forces and making a structural update step. We connect the process of structural relaxation to an iterative application of *frame*, and treat the relaxation as training through this iterated map. 
