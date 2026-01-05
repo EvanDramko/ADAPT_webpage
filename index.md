@@ -13,7 +13,7 @@ Our work explores how advancments in machine learning can be leveraged for this 
 # Contributions:
 
 ### ADAPT: Graphless Force Fields
-> Dramko, Evan, et al. ["ADAPT: Lightweight, Long-Range Machine Learning Force Fields Without Graphs." arXiv preprint arXiv:2509.24115 (2025).](https://arxiv.org/abs/2509.24115) [Zenodo](https://zenodo.org/records/17347558); [Github](https://github.com/EvanDramko/ADAPT_Released)
+> Dramko, Evan, et al. ["ADAPT: Lightweight, Long-Range Machine Learning Force Fields Without Graphs." arXiv preprint arXiv:2509.24115 (2025).](https://arxiv.org/abs/2509.24115) [Zenodo](https://zenodo.org/records/17411327); [Github](https://github.com/EvanDramko/ADAPT_Released)
 
 The majority of existing MLFF works utilize graph based neural network (GNN) strategies. GNNs offer rotation and translation equivariance and are a natural fit to the way we often diagram atomic structures. Motivated by the case of crystal defects, we show that the use of direct Cartesian Coordinate systems rather than graphs allows for efficient computation of all possible pairwise interactions through self-attention. The effect of exact distance measures and global interactions is a 33% reduction in prediction error on a defect dataset. Below, we show a side-by-side comparison of the actual vs predicted forces for ADAPT (left) and MACE (right). 
 
