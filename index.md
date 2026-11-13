@@ -14,7 +14,7 @@ image: /assets/img/adapt-force-comparison.png
       <span class="eyebrow">Presented by</span>
       <a class="presenter" href="https://evandramko.github.io/">Evan Dramko <span aria-hidden="true">↗</span></a>
       <span>PhD candidate · Computer Science · Rice University</span>
-      <a href="mailto:ed55@rice.edu">ed55@rice.edu</a>
+      <button class="email-button" type="button" data-email-contact hidden>Click here to email me</button>
     </div>
   </div>
   <div class="hero-actions">
@@ -111,7 +111,7 @@ image: /assets/img/adapt-force-comparison.png
       <h3>Evan Dramko</h3>
       <p>Machine learning &amp; AI for scientific discovery.<br>Computer Science, Rice University.</p>
       <a class="contact-url" href="https://evandramko.github.io/">evandramko.github.io <span aria-hidden="true">↗</span></a>
-      <div class="contact-links"><a href="mailto:ed55@rice.edu">Email</a><a href="https://scholar.google.com/citations?user=iKjv4W4AAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/EvanDramko">GitHub</a></div>
+      <div class="contact-links"><button class="email-button" type="button" data-email-contact hidden>Click here to email me</button><a href="https://scholar.google.com/citations?user=iKjv4W4AAAAJ&amp;hl=en">Google Scholar</a><a href="https://github.com/EvanDramko">GitHub</a></div>
     </div>
     <div class="collaborators">
       <p class="eyebrow">People &amp; research groups</p>

@@ -6,6 +6,10 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 "Noto Sans",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
 a:hover{color:var(--accent)}
+.email-button{font:inherit;color:inherit;background:transparent;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.email-button:hover{color:var(--accent)}
+.email-button:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
+.contact-panel .email-button:hover{color:#bde3cf}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}
 img{display:block;max-width:100%;height:auto}
 p{margin:0 0 20px}

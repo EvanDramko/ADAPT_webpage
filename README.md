@@ -14,7 +14,10 @@ With the repository's Ruby dependencies installed, run `bundle exec jekyll serve
 and visit `http://localhost:4000/ADAPT_webpage/`.
 
 The research layout is separate from the original theme, which remains available
-for other pages. No client-side JavaScript is required.
+for other pages. Email buttons use a small script to construct the mail link only
+when clicked, keeping the address out of the page HTML. This deters basic scraping,
+but does not prevent crawlers from decoding or executing the script. With JavaScript
+disabled, the email buttons stay hidden; the personal website link remains available.
 
 ## Sources and figures
 
