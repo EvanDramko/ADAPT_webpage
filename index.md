@@ -124,6 +124,7 @@ image: /assets/img/adapt-force-comparison.png
         <li><a href="https://scholar.google.com/citations?user=HLneol4AAAAJ&amp;hl=en">Yihuang Xiong</a><span>Coauthor</span></li>
         <li><a href="https://www.linkedin.com/in/aleksandar-krivokapic-802abb2b6/">Aleksander Krivokapic</a><span>Coauthor</span></li>
         <li><span>Yifei Zhang</span><span>Rice University · Coauthor</span></li>
+        <li><span>Marta Maia</span><span>Rice University · Collaborator</span></li>		
       </ul>
     </div>
   </div>
