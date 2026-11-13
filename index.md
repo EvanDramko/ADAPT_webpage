@@ -128,9 +128,3 @@ image: /assets/img/adapt-force-comparison.png
     </div>
   </div>
 </section>
-
-<aside class="share" aria-labelledby="share-title">
-  <a href="{{ '/assets/img/project-qr.png' | relative_url }}" download="evan-dramko-research-qr.png" aria-label="Download the project-page QR code for talk slides"><img src="{{ '/assets/img/project-qr.png' | relative_url }}" width="108" height="108" loading="lazy" alt="QR code linking to this research page"></a>
-  <div><h2 id="share-title">Take the papers with you.</h2><p>Scan to save this page, or add the QR code to your talk slides.</p><a class="share-url" href="{{ '/' | absolute_url }}">evandramko.github.io/ADAPT_webpage/</a></div>
-  <a class="button" href="{{ '/assets/img/project-qr.svg' | relative_url }}" download="evan-dramko-research-qr.svg">Download QR <span aria-hidden="true">↓</span></a>
-</aside>
